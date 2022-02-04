@@ -15,7 +15,12 @@
 |              | Graph Model      | 🟢 Stable | 🟢 Stable   | 🟢 Stable |||
 |              | Graph Canvas     | 🟢 Stable | 🟢 Stable   | 🟢 Stable ||| 
 |              | Landscape Canvas | 🟢 Stable | 🟢 Stable   | 🟢 Stable ||| 
-|              | Script Canvas    | 🟢 Stable | 🟠 Volatile | 🟢 Stable || [Doc](https://o3de.org/docs/user-guide/scripting/script-canvas/) |
+|              | Script Canvas    | 🟢 Stable | 🟠 Volatile | 🟢 Stable || [Doc]| Installer    ||||||| 
+| Installer    ||||||| 
+|              | Installer  | 🟢 Stable | 🟢 Stable   | 🟢 Stable |||
+| Project Manager  ||||||| 
+|              | Project Manager  | 🟢 Stable | 🟢 Stable   | 🟢 Stable |||
+(https://o3de.org/docs/user-guide/scripting/script-canvas/) |
 | Gems         ||||||| 
 |              |   Expression Evaluation   | 🟢 Stable | 🟢 Stable | 🟢 Stable ||| 
 |              |   Script Canvas Developer | 🟢 Stable | 🟢 Stable | 🟢 Stable ||| 
