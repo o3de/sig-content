@@ -27,7 +27,7 @@ The behavior context will be able to return the node contents to Python scripts 
 
 Finally, importing the UDP metadata will allow teams to adopt interchangeable data files like FBX so that they will incorporate their favorite DCC tools to load and update the FBX files. This allows teams to have more flexibility to interop with the same source scene files the O3DE engine import.
 
-[flow pic]
+![image](rfc-2202-user-defined-properties/udps_rfc_one_page_diag.png)
 
 # Technical design description
 
