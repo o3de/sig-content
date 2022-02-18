@@ -19,7 +19,7 @@ These are some example of how the O3DE engine teams can use these UDP metadata:
 
 # Feature design description
 
-The main features that will be added with adding UDP metadata into the scene building pipeline includes reading key-value pairs per node in the scene graph, exposing the UDP metadata to Python script hooks, and enable an interchangeable workflow into the O3DE engine.
+The main features that will be added with adding UDP metadata into the scene building pipeline includes reading key-value pairs per node in the scene graph, exposing the UDP metadata to Python script hooks, and enable custom art pipelines into the O3DE engine.
 
 The AssImp library has a custom properties data structure to capture node metadata that is imported from FBX, glTF, and IFC source scene files. This allows the scene importer to store the UDP metadata uniformly as a key-value pair where the key is a string and a value can be a Boolean, integer, or float value.
 
