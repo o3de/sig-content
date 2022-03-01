@@ -92,7 +92,7 @@ const AZStd::any& propertyMaterialPath = propertyMaterialPathIterator->second;
 if (propertyMaterialPath.empty() || propertyMaterialPath.is<AZStd::string>() == false)
 {
 	AZ_Error("prefab", false, "The 'o3de.default.material' custom property value type must be a string."
-							  "This will need to be fixed in the DCC tool and re-export the file asset.");
+				  "This will need to be fixed in the DCC tool and re-export the file asset.");
 	return;
 }
 
