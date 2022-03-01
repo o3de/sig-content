@@ -103,14 +103,6 @@ if (materialAssetPath->empty())
 	AZ_Error("prefab", false, "Material asset path must not be empty.");
 	return;
 }
-
-// create a material component for this entity's mesh to render with
-AzFramework::BehaviorComponentId editorMaterialComponent;
-AzToolsFramework::EntityUtilityBus::BroadcastResult(
-	editorMaterialComponent,
-	&AzToolsFramework::EntityUtilityBus::Events::GetOrAddComponentByTypeName,
-	entityId,
-	"EditorMaterialComponent");
 ```
 
 # What are the advantages of the feature?
