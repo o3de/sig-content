@@ -72,6 +72,47 @@ def print_properties_manifest(scene):
             node = azlmbr.scene.graph.NodeIndex()
 ```
 
+An example in C++ of accessing the UDP custom property map:
+
+```
+const auto customPropertyData = azrtti_cast<const DataTypes::ICustomPropertyData*>(graph.GetNodeContent(propertyDataIndex));
+if (!customPropertyData)
+{
+	AZ_Error("prefab", false, "Missing custom property data content for node.");
+	return;
+}
+
+const auto propertyMaterialPathIterator = customPropertyData->GetPropertyMap().find("o3de.default.material");
+if (propertyMaterialPathIterator == customPropertyData->GetPropertyMap().end())
+{
+	return;
+}
+
+const AZStd::any& propertyMaterialPath = propertyMaterialPathIterator->second;
+if (propertyMaterialPath.empty() || propertyMaterialPath.is<AZStd::string>() == false)
+{
+	AZ_Error("prefab", false, "The 'o3de.default.material' custom property value type must be a string."
+							  "This will need to be fixed in the DCC tool and re-export the file asset.");
+	return;
+}
+
+// find asset path via node data
+const AZStd::string* materialAssetPath = AZStd::any_cast<AZStd::string>(&propertyMaterialPath);
+if (materialAssetPath->empty())
+{
+	AZ_Error("prefab", false, "Material asset path must not be empty.");
+	return;
+}
+
+// create a material component for this entity's mesh to render with
+AzFramework::BehaviorComponentId editorMaterialComponent;
+AzToolsFramework::EntityUtilityBus::BroadcastResult(
+	editorMaterialComponent,
+	&AzToolsFramework::EntityUtilityBus::Events::GetOrAddComponentByTypeName,
+	entityId,
+	"EditorMaterialComponent");
+```
+
 # What are the advantages of the feature?
 
 The scene builder will read in this UDP metadata so that tech artists can write Python scripts to process scene node data to produce intended product outputs like LODs, mesh optimizations, material assignments, and physics data.
