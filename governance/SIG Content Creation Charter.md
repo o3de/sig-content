@@ -17,15 +17,14 @@ Two concise lines explaining what this SIG does with bullet points of the major 
 - Design and maintain generic editor framework including related system components
 - Design and maintain undo/redo functionality
 - Design and maintain keybind and controller assignments, but not the underlying runtime or handler
-- Design and maintain timeline sequence editor that interfaces and allows record/playback of data changes for entities and components. (trackview)
+- Design and maintain timeline sequence editor that interfaces and allows record/playback of data changes for entities and components. (TrackView)
 - Implement and maintain localization framework for editor
-- Design and maintain 2D runtime and edit time UI solution (Lyshine)
-- Design and maintain primitive 3D geometry creation and editing tool (whitebox)
-- Design and maintain generic node based editor and workflow system (graph canvas/ Script canvas)
+- Design and maintain 2D runtime and edit time UI solution (LyShine)
+- Design and maintain primitive 3D geometry creation and editing tool (Whitebox)
+- Design and maintain generic node based editor and workflow system (Graph canvas/ Script Canvas)
 - Design and publish design and workflow templates, examples, and guidelines.
-- Design and maintain Animation editing tool (EmotionFX)
-- Design and maintain a LUA based script editor with collection of objects exposed to LUA for debugging.
-- maintain LUA language integration
+- Design and maintain a Lua based script editor with collection of objects exposed to Lua for debugging.
+- maintain Lua language integration
 - Maintain Prefab workflows
 - Maintain AZTools Framework
 - Maintain Qt for Python bindings 
