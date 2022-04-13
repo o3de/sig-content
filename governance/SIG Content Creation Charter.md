@@ -20,11 +20,11 @@ Two concise lines explaining what this SIG does with bullet points of the major 
 - Design and maintain timeline sequence editor that interfaces and allows record/playback of data changes for entities and components. (TrackView)
 - Implement and maintain localization framework for editor
 - Design and maintain 2D runtime and edit time UI solution (LyShine)
-- Design and maintain primitive 3D geometry creation and editing tool (Whitebox)
+- Design and maintain primitive 3D geometry creation and editing tool (White Box)
 - Design and maintain generic node based editor and workflow system (Graph canvas/ Script Canvas)
 - Design and publish design and workflow templates, examples, and guidelines.
 - Design and maintain a Lua based script editor with collection of objects exposed to Lua for debugging.
-- maintain Lua language integration
+- Maintain Lua language integration
 - Maintain Prefab workflows
 - Maintain AZTools Framework
 - Maintain Qt for Python bindings 
