@@ -1,11 +1,4 @@
-**Editor Workflow Tests**
-----------
-
-* [Common Issues to Watch For](#FoundationWorkflowTesting-CommonIssuestoWatchFor)
-* [Workflow 1: Editor launch, Level CRUD, Entity/Component CRUD](#FoundationWorkflowTesting-Workflow1:Editorlaunch,LevelCRUD,Entity/ComponentCRUD)
-* [Workflow 2: UI Layout Customization, Docking/Window Management](#FoundationWorkflowTesting-Workflow2:UILayoutCustomization,Docking/WindowManagement)
-* [Workflow 3: Prefab Editing Focus Mode](#FoundationWorkflowTesting-Workflow3:PrefabEditingFocusMode)
-* [Workflow 4: Read-Only Entities](#FoundationWorkflowTesting-Workflow4:Read-OnlyEntities)
+# Editor Workflow Tests
 
 Testing in this area should revolve primarily around UI/UX touchpoints with basic Editor functionality.
 
