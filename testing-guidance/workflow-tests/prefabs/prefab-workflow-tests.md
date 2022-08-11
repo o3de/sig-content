@@ -150,6 +150,6 @@ Runtime spawnables using Lua Scripting
 **Suggested Time Box:**
 10 minutes
 
-| Use Case                    | Requests                                                                                                                                                                                                                                                                    |
-|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spawn a prefab with Lua API | *   Create an entity with a Lua Script component<br>*   Assign multiple spawnable prefabs<br>*   Create multiple entities with various Lua scripts<br>*   Create custom script events via the Asset Editor<br>*   Configure various spawn delay values<br>*   Run Game mode |
+| Use Case                    | Requests                                                                                                                                                                                                                                                                    | Things to Watch For |
+|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
+| Spawn a prefab with Lua API | *   Create an entity with a Lua Script component<br>*   Assign multiple spawnable prefabs<br>*   Create multiple entities with various Lua scripts<br>*   Create custom script events via the Asset Editor<br>*   Configure various spawn delay values<br>*   Run Game mode |                     |
