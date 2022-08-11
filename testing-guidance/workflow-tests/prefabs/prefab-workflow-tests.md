@@ -34,7 +34,7 @@ Test guidance will sometimes note specific issues to watch for. The common issue
 
 ## Feature: Basic Prefab Workflows
 
-### Workflow 1:Basic Prefab CRUD
+### Workflow 1: Basic Prefab CRUD
 
 [https://www.o3de.org/docs/learning-guide/tutorials/entities-and-prefabs/entity-and-prefab-basics/](https://www.o3de.org/docs/learning-guide/tutorials/entities-and-prefabs/entity-and-prefab-basics/)
 
