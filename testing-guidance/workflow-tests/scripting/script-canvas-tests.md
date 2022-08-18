@@ -2,9 +2,6 @@
 
 Testing in this area should focus on the functionality of Script Canvas editor.
 
-## Project Requirements
-Any project can be used and no special gems are required.
-
 ## Common Issues to Watch For
 
 Test guidance will sometimes note specific issues to watch for. The common issues below should be watched for through all testing, even if unrelated to the current workflow being tested.
@@ -26,6 +23,9 @@ Test guidance will sometimes note specific issues to watch for. The common issue
 <b></b>
 ### Area: Opening and configuring the Script Canvas Editor
 
+## Project Requirements
+Any project can be used and no special gems are required.
+
 **Product:** 
 Visible and responsive Script Canvas editor.
 
@@ -42,7 +42,7 @@ Visible and responsive Script Canvas editor.
 
 ### Area: Default Script Canvas Editor tools
 
-### Project Requirements
+## Project Requirements
 SC editor with the 5 basic tools enabled
 
 **Product:** 
@@ -60,13 +60,10 @@ N/A
 | Use the Node Palette to find node types                             | *   Search the Node Palette for a specific node type.<br> * Use the scrolling view controls to browse nodes.>br> * Drag a node off the palette onto a new SC graph.<br> * Use right click context menu on a SC graph to search & browse for nodes. <br> *   Mouse over a node in the palette to display a tooltip                                                                                     | *   Node palette renders properly when entering/deleting text in search field.<br> * Node categories can be expanded and collapsed.                                                                                                               |
 
 
-**Product:** 
-Visible and responsive Script Canvas editor.
-
 ### Area: Basic Script Canvas graph tests 
 Testing in this area verify basic functionality of script canvas graphs and more in-depth functionality of the default editor tools.
 
-### Project Requirements
+## Project Requirements
 Any project with a new level. SC editor with the 5 basic tools enabled
 
 **Product:** 
@@ -87,7 +84,7 @@ Tests in this verify more advanced core features of script canvas.
 Any project with a new level. SC editor with the 5 basic tools enabled
 
 **Product:**
-Script canvas graph files that produce verifiable outputs when attached to entities and run through game mode or interpreter
+Organized and annotated Script canvas graph files that produce verifiable outputs when attached to entities and run through game mode or interpreter
 
 **Suggested Time Box:**
 120 minutes
