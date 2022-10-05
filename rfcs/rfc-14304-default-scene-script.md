@@ -116,7 +116,7 @@ It might be useful to include an office tutorial video to demonstrate how to set
 
 These are some open questions and potential scenarios that should be considered during development.
 
-Q: What happens if a source scene asset has no scene manifest sidecar file?
+**Q: What happens if a source scene asset has no scene manifest sidecar file?**
 
 Right now if the foo.fbx.assetinfo file that contains the scene manifest file is missing, then the default construction manifest rules are used to export the source scene asset. After this feature is complete, if no .assetinfo sidecar file is present then the default script will be run then the “construct default” logic will be run.
 
