@@ -1,13 +1,3 @@
-*   [1 Introduction:](#TestPlan:ActionManager-1Introduction:)
-    *   [1.1 References:](#TestPlan:ActionManager-1.1References:)
-*   [2 Active Issues:](#TestPlan:ActionManager-2ActiveIssues:)
-*   [3 Risks:](#TestPlan:ActionManager-3Risks:)
-*   [4 Workflow Testing:](#TestPlan:ActionManager-4WorkflowTesting:)
-*   [5 Automation:](#TestPlan:ActionManager-5Automation:)
-    *   [5.1 Python Automation](#TestPlan:ActionManager-5.1PythonAutomation)
-    *   [5.2 C++ Unit Tests](#TestPlan:ActionManager-5.2C++UnitTests)
-*   [6 User-facing Documentation:](#TestPlan:ActionManager-6User-facingDocumentation:)
-
 ### **1 Introduction:**
 
 This test plan is for validating the new Action Manager which improves Editor extensibility by allowing custom menus, hotkeys, and contextual actions to be registered via Gems/Python scripts.
