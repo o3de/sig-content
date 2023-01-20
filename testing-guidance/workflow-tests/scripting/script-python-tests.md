@@ -10,21 +10,25 @@ Test guidance will sometimes note specific issues to watch for. The common issue
 3. Unresponsive UI elements 
 
 ### Platforms:
+
 - Windows
 - Linux
 
 ### Documents and Common Terms
-[O3DE Documentation: Editor Python Bindings Gem](https://www.o3de.org/docs/user-guide/gems/reference/script/python/editor-python-bindings/) <br>
 
+[O3DE Documentation: Editor Python Bindings Gem](https://www.o3de.org/docs/user-guide/gems/reference/script/python/editor-python-bindings/)
 
-<b>Python Scripts</b>: Tool that lists python script samples and allows to execute those scripts.
+**Python Scripts**: Tool that lists python script samples and allows to execute those scripts.
 
-<b></b>
 ## Area: Opening Python Scripts tool and executing sample scripts
 
 ### Project Requirements
-Any project can be used, the Editor Python Bindings gem and its gem dependencies are required.
-<br/>White box Gem is required to visualize easily the script execution as it includes a python scripts that create various entities with meshes.
+
+<ul>
+<li>Any project can be used, the Editor Python Bindings gem and its gem dependencies are required.</li>
+
+<li>White box Gem is required to visualize easily the script execution as it includes a python scripts that create various entities with meshes.</li>
+</ul>
 
 **Product:** 
 Visible and responsive Python Script tool.
@@ -34,4 +38,4 @@ Visible and responsive Python Script tool.
 
 | Workflow                                                            | Requests                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Things to Watch For                                                                                                                                                                                                                               |
 |---------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|Executing python script samples| * Open Python Scripts tool via Tools -> Other -> Python Scripts <br/> * Select a script to execute (e. g. Sphere, Staircase)![Python Scripts Tool](images/Python_Scripts_Tool.png)<br/>* Execute selected script using dedicated Execution button.| * Script executes without errors/warnings in the console. <br/> * Entity with mesh component is created and visible in Viewport.
+|Executing python script samples| <ul><li>Open Python Scripts tool via Tools -> Other -> Python Scripts</li><li>Select a script to execute (e. g. Sphere, Staircase)![Python Scripts Tool](images/Python_Scripts_Tool.png)</li><li>Execute selected script using dedicated Execution button.</li></ul>|<ul> <li> Script executes without errors/warnings in the console.</li><li>Entity with mesh component is created and visible in Viewport.</li></ul>
