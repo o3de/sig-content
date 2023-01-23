@@ -16,20 +16,18 @@ Test guidance will sometimes note specific issues to watch for. The common issue
 
 ### Docs:
 
-<ul>
-	<li>[O3DE Documentation: Writing Lua Scripts in Open 3D Engine](https://www.o3de.org/docs/user-guide/scripting/lua/)</li>
-	<li>[O3DE Documentation: Introduction to Open 3D Engine’s Lua Editor](https://www.o3de.org/docs/user-guide/scripting/lua/lua-editor/)</li>
-	<li>[O3DE Documentation: Basic Structure of a Lua Script](https://www.o3de.org/docs/user-guide/scripting/lua/basic-lua-script/)</li>
-	<li>[O3DE Documentation: Debugging Lua Scripts](https://www.o3de.org/docs/user-guide/scripting/lua/debugging-scripts/)</li>
-	<li>[O3DE Documentation: Debugging with Lua Editor](https://www.o3de.org/docs/user-guide/scripting/lua/debugging-tutorial/)</li>
-	<li>[O3DE Documentation: Using EBuses in Lua](https://www.o3de.org/docs/user-guide/scripting/lua/ebus/)</li>
-</ul>
+* [O3DE Documentation: Writing Lua Scripts in Open 3D Engine](https://www.o3de.org/docs/user-guide/scripting/lua/)
+* [O3DE Documentation: Introduction to Open 3D Engine’s Lua Editor](https://www.o3de.org/docs/user-guide/scripting/lua/lua-editor/)
+* [O3DE Documentation: Basic Structure of a Lua Script](https://www.o3de.org/docs/user-guide/scripting/lua/basic-lua-script/)
+* [O3DE Documentation: Debugging Lua Scripts](https://www.o3de.org/docs/user-guide/scripting/lua/debugging-scripts/)
+* [O3DE Documentation: Debugging with Lua Editor](https://www.o3de.org/docs/user-guide/scripting/lua/debugging-tutorial/)
+* [O3DE Documentation: Using EBuses in Lua](https://www.o3de.org/docs/user-guide/scripting/lua/ebus/)
 
 ## Area: Opening Lua Editor, connecting to Editor and using Find tool
 
 ### Project Requirements
 
-<ul><li>Any project with the Remote Tools Connection Gem</li></ul>
+* Any project with the Remote Tools Connection Gem
 
 **Product:** 
 
@@ -49,7 +47,7 @@ Running Lua Editor with basic functions checked.
 
 ### Project Requirements
 
-<ul><li>Any project</li></ul>
+* Any project
 
 **Product:** 
 
@@ -64,7 +62,8 @@ Skeleton Lua script assigned to an entity and printing simple messages to consol
 | Create a Lua skeleton script | <ol><li>Create a new .lua file by selecting *File → New* in Lua Editor, make sure to save it in a path accessible to Editor (for example *<project path\>\\Assets\\*)</li><li>Add a [skeleton Lua script](https://www.o3de.org/docs/user-guide/scripting/lua/basic-lua-script/#skeleton-script) to the file - remember to replace *BaseScript* in the file to the name of your lua file if it is different (you can do this easily using *Find* tool and *Replace All* action)</li><li>Replace `-- Activation Code` and `-- Deactivation Code` lines with `Debug.Log(tostring("Hi!"));` and `Debug.Log(tostring("Bye!"));` respectively</li><li>Save the .lua file (for example *File → Save* or *Ctrl+S*)</li></ol>| <ul><li>Basic script can be created and saved</li><li>After saving *Compilation Succesful - <path\>* is printed to Log and no errors occur</li></ul>|
 | Create an entity using the created skeleton Lua script | <ol><li>In Editor, create a new entity and add a *Lua Script* component to it</li><li>Select *Lua Script* component on your new entity, click the *Pick Lua Script* button ![Lua Component Pick Lua Script Button](images/Luacomponent_pick_lua_script_button.png) and choose your skeleton script</li><li>Enter and exit Game Mode (using for example *Ctrl+G*) while paying attention to the Editor's Console</li></ol> | <ul><li>*Lua Script* component can be assigned to an entity</li><li>Lua script can be assigned to *Lua Script* component</li><li>*Hi!* is printed to Console on entering the Game Mode and *Bye!* on exiting it</li><li>Editor remains stable</li><li>Final working script can be found below this table</li></ul> |
 
-<details><summary>"Area: Creating a Lua skeleton script file" script:</summary>
+<details><summary><b><mark style="background-color: blue;"
+>"Area: Creating a Lua skeleton script file" script:</mark></b></summary>
 <p>
 
 ```
@@ -95,7 +94,8 @@ return BaseScript
 
 ### Project Requirements
 
-<ul><li>Any project can be used</li><li>Saved script from "Area: Lua skeleton script usage" helps with setup</li></ul>
+* Any project can be used
+* Saved script from "Area: Lua skeleton script usage" helps with setup
 
 **Product:** 
 
@@ -110,7 +110,8 @@ Lua Script returning messages to Editor Console using properties declared in the
 | Add a property to Properties table in a script | <ol><li>Add a property to the `Properties` table of opened Lua script (example of this can be viewed under `local BaseScript = {}` table in the *"Area: Properties usage in Lua scripts" script* below)</li><li>Add a line to OnActivate() that prints the property after a string (for example change `Debug.Log(tostring("Hi!"));` to `Debug.Log(tostring("Hi! My value is: " .. BaseScript.Properties.MyValue));` - where BaseScript is the name of your Lua script)</li><li>Save the file and run Game Mode with this script added to a Lua Script entity</li></ol> | <ul><li>File is saved without error</li><li>When entering Game Mode, the property is properly printed (for example *Hi! My value is: 1*)</li></ul> |
 | Add local properties in a script | <ol><li>Write a code which declares two properties, adds them together in a third property and prints that third property (example of this can be viewed under `OnDeactivate()` function in the *"Area: Properties usage in Lua scripts" script* below) </li><li>Modify the Debug.Log line so that it uses the local properties - for example: `Debug.Log(tostring(Bye .. NumberOne .. " + " .. NumberTwo .. " = " .. NumbersAdded));`</li><li>Save the file and run and exit Game Mode with this script added to a Lua Script entity</li></ol> | <ul><li>File is saved without error</li><li>When exiting Game Mode, the properties are properly printed (for example *Bye! 1 + 2 = 3*)</li></ul> |
 
-<details><summary>"Area: Properties usage in Lua scripts" script:</summary>
+<details><summary><b><mark style="background-color: blue;"
+>"Area: Properties usage in Lua scripts" script:</b></mark></summary>
 <p>
 
 ```
@@ -145,7 +146,9 @@ return BaseScript
 
 ### Project Requirements
 
-<ul><li>Any project with the Remote Tools Connection Gem added</li><li>Lua Editor connected to Editor</li><li>Saved script from "Area: Properties usage in Lua scripts" helps with setup</li></ul>
+* Any project with the Remote Tools Connection Gem added
+* Lua Editor connected to Editor
+* Saved script from "Area: Properties usage in Lua scripts" helps with setup
 
 **Product:** 
 
@@ -164,7 +167,9 @@ Simple debugging setup created and confirmed to be working.
 
 ### Project Requirements
 
-<ul><li>Any project with the Remote Tools Connection Gem</li><li>Lua Editor connected to Editor</li><li>Saved script from "Area: Properties usage in Lua scripts" helps with setup</li></ul>
+* Any project with the Remote Tools Connection Gem
+* Lua Editor connected to Editor
+* Saved script from "Area: Properties usage in Lua scripts" helps with setup
 
 **Product:** 
 
@@ -180,7 +185,8 @@ Entity that can be moved with keyboard input in Game Mode using Lua Script.
 | Modify the Lua script so that it uses keyboard input to move the entity | <ol><li>Modify the script as shown below the table in under the **"Area: Moving entity using Lua script" script:**</li><li>Find the following copied functions in the Class Reference (Remember that Lua Editor has to be connected to the Editor):<ul><li>GetEntityForward</li><li>AddVelocity</li><li>GetEntityRight</li><li>GetTickDeltaTime</li><li>RotateAroundLocalZ</li></ul></li><li>Save the modified Lua script</li></ol> | <ul><li>Referenced functions can be found in Class Reference</li><li>Lua script can be saved without errors</li></ul> |
 | Create and move Player entity in Game Mode | <ol><li>Create an entity with the following components: <ul><li>*Mesh*</li><li>*Input*</li><li>*PhysX Character Controller*</li><li>*PhysX Character Gameplay*</li></ul></li><li>Assign the PlayerMovement.inputbindings to the Input component</li><li>Assign the Lua script to the Lua Script component.</li><li>Add a Model Asset to the Mesh component (for example BeveledCylinder.fbx)</li><li>Add a child *Camera* entity to the Player entity</li><li>Add a Camera component to the *Camera* child entity and set the Transform's Translate to `{X = 0.0; Y = -3.0; Z = 2.0}` </li><li>Enter the Game Mode and move the entity using mouse and WASD keys </li></ol> | <ul><li>Mentioned components can be added to entities and relevant files can be assigned to their respective components</li><li>Child entity can be added to an entity and it's Transform adjusts based on the parent entity</li><li>Player entity can be moved and rotated around in the Game Mode using defined input keys/mouse</li></ul> |
 
-<details><summary>"Area: Moving entity using Lua script" script:</summary>
+<details><summary><b><mark style="background-color: blue;"
+>"Area: Moving entity using Lua script" script:</b></mark></summary>
 <p>
 
 ```
@@ -254,7 +260,7 @@ return BaseScript
 
 ### Project Requirements
 
-<ul><li>Any project</li></ul>
+* Any project
 
 **Product:** 
 
@@ -270,7 +276,8 @@ Two Lua scripts, where one of the scripts uses variable passed to it from the ot
 | Create Lua scripts utilizing the Script Event to send a variable from one to another | <ol><li>Create two new Lua scripts and copy the contents of *SendEvent.lua* and *ReceiveEvent.lua* found under the **"Area: Using ScriptEvents to communicate between two Lua scripts" scripts:** to them</li><li>Save the Lua scripts with their respective names: *SendEvent.lua* and *ReceiveEvent.lua*</li></ol> | <ul><li>New Lua scripts can be created</li><li>Lua scripts save successfully with provided code</li></ul> |
 | Create entities using the Lua scripts and enter Game Mode | <ol><li>Create two entities with Lua Script component added to them</li><li>Assign *SendEvent.lua* to one of the entities and *ReceiveEvent.lua* to the other</li><li>Enter Game Mode</li></ol> | <ul><li>Entities with Lua Script components can be created</li><li>Lua scripts can be assigned to the Lua Script component</li><li>Assigned scripts execute printing *Received number: 123.0* about every second</li></ul> |
 
-<details><summary>"Area: Using ScriptEvents to communicate between two Lua scripts" scripts:</summary>
+<details><summary><b><mark style="background-color: blue;"
+>"Area: Using ScriptEvents to communicate between two Lua scripts" scripts:</b></mark></summary>
 <p>
 
 *SendEvent.lua*
