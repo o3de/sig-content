@@ -24,11 +24,9 @@ Test guidance will sometimes note specific issues to watch for. The common issue
 
 ### Project Requirements
 
-<ul>
-<li>Any project can be used, the Editor Python Bindings gem and its gem dependencies are required.</li>
+ - Any project can be used, the Editor Python Bindings gem and its gem dependencies are required.
+ - White box Gem is required to visualize easily the script execution as it includes a python scripts that create various entities with meshes.
 
-<li>White box Gem is required to visualize easily the script execution as it includes a python scripts that create various entities with meshes.</li>
-</ul>
 
 **Product:** 
 Visible and responsive Python Script tool.
