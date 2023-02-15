@@ -56,7 +56,7 @@ Entities in a prefab instance object are stored in an unordered map of entity al
   
 This does increase the editor memory usage but it is not a significant number for even a large level (a few MB). For a level with10k entities with 10 components each, the total number of editor components would be 100k. So the increase in editor memory usage would be 100k \* size of AZStd::string. Based on whether a stateless allocator is used or not, the size for a string varies from 24-32 Bytes. So, we would be looking at a 2-3 MB increase in editor memory usage. 
 
-![AddComponentAlias](https://user-images.githubusercontent.com/82230713/216187683-0c9ae89a-064a-4e0e-9913-feb905985158.png)
+![AddComponentAlias](rfc-112-prefabs-override-management-in-dpe-entity-inspector/216187683-0c9ae89a-064a-4e0e-9913-feb905985158.png)
 
 ### API changes
 
@@ -81,17 +81,17 @@ The key to indicating which properties are overridden is to create a custom hand
 
 Here is a rough image of what the override icon would look like next to overridden properties. In the image below, the EditorCommentComponent's 'configuration' field is modified and stored as an overrride, hence the blue icon (Ignore the weird spacing. It's a Qt setting that needs to be fixed in the prototype)
 
-![OverrideIcon](https://user-images.githubusercontent.com/82230713/216188460-f6cb26b6-3e5e-482f-83ca-a3aa2eb1ae4c.png)
+![OverrideIcon](rfc-112-prefabs-override-management-in-dpe-entity-inspector/216188460-f6cb26b6-3e5e-482f-83ca-a3aa2eb1ae4c.png)
 
 Once we have the OverrideIconHandler, adding a revert option is going to be easy because the handler inherits from the PropertyHandlerWidget, which at the end of the day is a QWidget. So, the widget's behavior will be extended to show a custom context menu using Qt 'customContextMenuRequested' signal. When the 'revert' option is clicked from the custom context menu, the call needs to be sent to AzToolsFramework:Prefab:PrefabOverridePublicInterface so that the prefab system can revert the override on the specified property of the component within the selected entity.
 
 Here is a rough image of how that override menu option would look like (taken from the prototype):
 
-![RevertOverrideIcon](https://user-images.githubusercontent.com/82230713/216188579-33657f6c-ac2c-45a7-980f-52bbb3a59f78.png)
+![RevertOverrideIcon](rfc-112-prefabs-override-management-in-dpe-entity-inspector/216188579-33657f6c-ac2c-45a7-980f-52bbb3a59f78.png)
 
 The exact behavior of where and when the override icon will appear for different types of property hierarchies is subject to a UX review. You can find some of these different hierarchies in the 'Open Questions' section and the proposed places of where the override icons should show up. The rule of thumb for where the icon should show up that will be followed for initial development is 'Show it next to the row it appears in the entity inspector. If that is not possible, show it next to the 'group' it belongs to if any. If neither of them is possible, show it next to the component'. These type of UX decisions will be however discussed with sig-ux to reach a consensus on what's the best user experience for the editor user.
 
-![ShowingOverriddenIcons](https://user-images.githubusercontent.com/82230713/216188752-c544bb3b-f620-430a-a237-6178da1554be.png)
+![ShowingOverriddenIcons](rfc-112-prefabs-override-management-in-dpe-entity-inspector/216188752-c544bb3b-f620-430a-a237-6178da1554be.png)
 
 ### API Changes/Additions
 
@@ -156,7 +156,7 @@ The responsibility of creating the prefab patches and calling appropriate prefab
 
 Generate Prefab Patches
 
-![GeneratePrefabPatches](https://user-images.githubusercontent.com/82230713/216189556-bfd1f5c6-c36e-488d-b92f-c16f71fbb084.png)
+![GeneratePrefabPatches](rfc-112-prefabs-override-management-in-dpe-entity-inspector/216189556-bfd1f5c6-c36e-488d-b92f-c16f71fbb084.png)
 
 ### API Changes
 
