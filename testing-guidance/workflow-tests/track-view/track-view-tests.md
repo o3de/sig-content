@@ -1,9 +1,12 @@
 ## **Track View Workflow Tests**
+
 Testing in this area should focus on the functionality of the Track View. This is a general tool for the creating, editing and exporting of cutscenes.
 
 ## General Docs
+
 * https://www.o3de.org/docs/user-guide/visualization/cinematics/track-view/
 ##  Common Issues to Watch For
+
 Test guidance will sometimes note specific issues to watch for. The common issues below should be watched for through all testing, even if unrelated to the current workflow being tested.
 
 * The Camera parameter does not take effect.
@@ -82,18 +85,4 @@ Test guidance will sometimes note specific issues to watch for. The common issue
 | Basic functionality of the Renderer Output                         | <ol><li>Complete the steps for the "Configure entity nodes in the Track View".</li><li>Add Director node to the Sequence.</li><li>Open the Renderer Output.</li><li>Set destination folder for the output.</li><li>Add Batch for the Director node.</li><li>Start the output generation.</li></ol> | <ul><li>The Renderer Output tool does not open.</li><li>The destination folder cannot be set.</li><li>A batch Director cannot be added.</li><li>Frame files are not generated inside the selected directory.</li></ul>  |
 | Configuration of the Renderer Output                         | <ol><li>Complete the steps for the "Basic functionality of the Renderer Output".</li><li>Change the Input settings.</li><li>Change the resolution outputs.</li><li>Change FPS options.</li><li>Change capture options.</li><li>Save Batch settings.</li><li>Change the Sequence and load the previous Batch.</li></ol> | <ul><li>Input settings cannot be changed.</li><li>Output settings cannot be changed.</li><li>An mp4 file cannot be created as an output.</li><li>Batch cannot be set, saved and loaded.</li></ul>  |
 ---
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
 
