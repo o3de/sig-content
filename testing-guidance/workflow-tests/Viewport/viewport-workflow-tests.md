@@ -14,6 +14,7 @@ Test guidance will sometimes note specific issues to watch for. The common issue
 - Linux​
 ​
 ### Documentation pages:​
+
 * [Working with the 3D Viewport](https://www.o3de.org/docs/user-guide/editor/Viewport/)
 * [Reference Spaces](https://www.o3de.org/docs/user-guide/editor/Viewport/reference-spaces/)
 * [Group Selection](https://www.o3de.org/docs/user-guide/editor/Viewport/group-selection/)
