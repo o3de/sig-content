@@ -5,6 +5,7 @@ Testing in this area should focus on basic Viewport functionality.
 ## Common Issues to Watch For
 ​
 Test guidance will sometimes note specific issues to watch for. The common issues below should be watched for through all testing, even if unrelated to the current workflow being tested.
+
 1. Console log errors/warnings/spam
 2. Asserts
 ​
