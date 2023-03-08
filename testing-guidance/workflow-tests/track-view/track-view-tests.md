@@ -1,11 +1,8 @@
-## **Track View Workflow Tests**
+# Track View Workflow Tests
 
-Testing in this area should focus on the functionality of the Track View. This is a general tool for the creating, editing and exporting of cutscenes.
+Testing in this area should focus on the functionality of Track View. This is a general tool for the creation, editing and exporting of cutscenes.
 
-## General Docs
-
-* https://www.o3de.org/docs/user-guide/visualization/cinematics/track-view/
-##  Common Issues to Watch For
+###  Common Issues to Watch For
 
 Test guidance will sometimes note specific issues to watch for. The common issues below should be watched for through all testing, even if unrelated to the current workflow being tested.
 
@@ -16,9 +13,9 @@ Test guidance will sometimes note specific issues to watch for. The common issue
 * Editor or Track View crashes.
 * Track View does not display the recorded Sequence.
 
-# Workflows
+## Workflows
 
-## Area: Track View LKG Workflow
+### Area: Track View LKG Workflow
 
 **Project Requirements**
 
@@ -41,13 +38,13 @@ Test guidance will sometimes note specific issues to watch for. The common issue
 
 | Workflow                                        | Requests           | Things to Watch For |
 |-------------------------------------------------|--------------------|---------------------|
-|Track View editor can be launched and configured| <ol><li>Open Track View editor by multiple ways including:</li> <ul><li>Tools menu</li><li>Keyboard shortcut ( a shortcut can be assigned via Edit > Editor Settings > Keyboard Customization > Customize Keyboard)</li></ul> <li>Perform resize, maximize, minimize undock, dock actions with Track View editor and its panes and drag them around the Editor. </li><li> Close and reopen the Track View editor.</ol> | <ul><li>Track View editor launch method does not work or does not launch quickly.</li> <li>Track View editor not retaining configuration settings on close/relaunch. <li>Track View editor not retaining configuration settings on close/relaunch.</li><li>Track View panes not rendering, having rendering issues after being altered.</li><li>Not being able to resize, dock or drag panes borders.</li></li></ul>  |
+|Track View editor can be launched and configured| <ol><li>Open Track View editor by multiple ways including:</li> <ul><li>Tools menu</li><li>Keyboard shortcut ( a shortcut can be assigned via Edit > Editor Settings > Keyboard Customization > Customize Keyboard)</li></ul> <li>Perform resize, maximize, minimize undock, dock actions with Track View editor and its panes and drag them around the Editor. </li><li> Close and reopen the Track View editor.</li></ol> | <ul><li>Track View editor launch method does not work or does not launch quickly.</li> <li>Track View editor not retaining configuration settings on close/relaunch. <li>Track View editor not retaining configuration settings on close/relaunch.</li><li>Track View panes not rendering, having rendering issues after being altered.</li><li>Not being able to resize, dock or drag panes borders.</li></ul>  |
 |A Sequence can be created and configured                | <ol> <li>Add Sequence to the Track View by multiple ways including:</li> <ul><li>Tools menu</li> <li>Node shortcut</li> </ul> <li>Name the Sequence.</li> <li>Edit Sequence properties by multiple ways including:</li> <ul> <li>Enabling autostart</li> <li>Editing Sequences name</li> <li>Changing start/end timings.</li> <li>Changing display time from seconds to frames.</li> <li>Selecting different Out of Range options.</li> </ul> <li>Delete and recreate the Sequence.</li> </ol> | <ul><li>The Sequence name is left empty.</li><li>Created Sequences do not appear in the Sequence dropdown.</li><li>Sequence properties changes do not take place in the Track Editor and the Curve Editor.</li></ul>  |
 | Using basic Track View editor controls                  | <ol><li>Select the Shaderball entity in the viewport.</li><li>RMB on the Sequence and select "Add selected entity".</li><li>Add some keys to the position track.</li><li>Verify that Track View toolbars are enabled.</li></ol> | <ul><li>Entities do not add to the Sequence.</li><li>Keys cannot be edited with the Keys toolbar.</li></ul>  |
 | FFmpeg plugin can be added to the Editor	              | <ol><li>You can open Start menu and find Registry Editor</li><li>In the Computer\HKEY_CURRENT_USER\SOFTWARE\O3DE\O3DE\, create Keys Settings</li><li>In the Settings, right click to add string value FFMPEG_PLUGIN and modify it to point to the path of ffmpeg executable</li><li>Reopen the Editor > Track View > Tools > Render Output.</li></ol> | <ul><li>FFMpeg plugin is not available.</li><li>After reopening, the Render Output tool shows errors or is not functional.</li></ul>  |
 ---
 
-## Area: Default Track View tools
+### Area: Default Track View tools
 
 **Project Requirements**
 
@@ -68,7 +65,7 @@ Test guidance will sometimes note specific issues to watch for. The common issue
 | Configure Curve editor toolbar	                         | <ol><li>Select one of the keys in the Curve editor.</li><li>Select each of the toolbar options, then move the key and the tangents.</li></ol> | <ul><li>The toolbar options cannot be selected.</li><li>Tangents and keys do not react differently after another toolbar option is selected.</li><li>Changes made in the Curve editor are not reflected in the running Sequence.</li></ul>  |
 ---
 	
-## Area: The Renderer Output tests
+### Area: The Renderer Output tests
 
 **Project Requirements**
 
