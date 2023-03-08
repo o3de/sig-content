@@ -10,6 +10,7 @@ Test guidance will sometimes note specific issues to watch for. The common issue
 2. Asserts
 ​
 ### Platforms:​
+
 - Windows
 - Linux​
 ​
