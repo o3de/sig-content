@@ -1,0 +1,3 @@
+<root versionnumber="1.0.0.2">
+	<dependency path="testAssets\dependency2.txt"/>
+</root>
