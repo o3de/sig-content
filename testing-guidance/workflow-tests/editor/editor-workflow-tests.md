@@ -14,12 +14,28 @@ Test guidance will sometimes note specific issues to watch for. The common issue
 1. Console log errors/warnings/spam
 2. Asserts
 
-### Documents and Common Terms
+## Documents and Common Terms
 * [Gems in Open 3D Engine](https://www.o3de.org/docs/user-guide/gems/)
 * [Adding and Removing Gems in a Project](https://www.o3de.org/docs/user-guide/project-config/add-remove-gems/)
 
+## Supported Graphical Configuration Variants
 
-### Workflow 1: Editor launch, Level CRUD, Entity/Component CRUD
+### Resolutions
+
+* 1080p (1920x1080)
+* 4k (3840 x 2160)
+* WQD (3440x1440)
+* WQD+ (3840×1600)
+
+### Scaling
+
+* 100
+* 125
+* 150
+* 175
+* 200
+
+## Workflow 1: Editor launch, Level CRUD, Entity/Component CRUD
 
 **Product:** 
 Saved and exported level with an interesting scene
@@ -35,9 +51,10 @@ Saved and exported level with an interesting scene
 | Add/edit various components to entities to create an interesting scene | <ol><li>As components are added to entities, position entities around Viewport using Transform/Rotate/Scale controls with snapping both enabled/disabled.</li><li>Make changes via Transform component as well.</li><li>Undo/Redo.</li></ol>| <ul><li>Component property control issues (Sliders/dropdowns/text boxes).</li><li>Component dependencies.</li><li>Rendering changes reflected in Viewport.</li><li>Viewport controls.</li></ul>|
 | Enter Game Mode                                                        |                                                                                                                                                                                                                               |                                                                                                                                                                            |
 | Save/Export level                                                      |                                                                                                                                                                                                                               | <ul><li>Asset Processor errors with level processing.</li></ul>                                                                                                            |
+| Resolution and Scaling												 | <ol><li>Launch the Editor and load any level.</li><li>Choose from the [Supported Graphical Configuration Variants](#supported-graphical-configuration-variants) three pairs of [Resolution](#resolutions) and [Scaling](#scaling).</li><li>Check the pairs configuration on your system.</li><li>Check each configuration with windowed and fullscreen Editor.</li></ol>| <ul><li>Restarting the editor after toggling full screen/windowed mode.</li><li>During full regression check all listed [Resolution](#resolutions) and [Scaling](#scaling) pairs.</li></ul>|
 ---
 
-### Workflow 2: UI Layout Customization, Docking/Window Management
+## Workflow 2: UI Layout Customization, Docking/Window Management
 
 **Product:** 
 Saved Editor UI Layout
@@ -55,7 +72,7 @@ Saved Editor UI Layout
 | Load back and forth between a few different layouts                                                              | <ol><li>Verify layouts load successfully with elements on both monitors.</li><li>Relaunch Editor while testing to ensure proper saves.</li></ol>| <ul><li>Missing tools/unsaved/unloaded changes.</li></ul>|
 ---
 
-### Workflow 3: Prefab Editing Focus Mode
+## Workflow 3: Prefab Editing Focus Mode
 
 **Product:** 
 No tangible product, this workflow covers updating/manipulating tangible products, but doesn't itself generate any
@@ -74,7 +91,7 @@ Create a Prefab with at least 2 entities underneath, each having a Mesh componen
 | With the prefab instance opened for editing verify the breadcrumb widget at the upper-left of the Viewport displays the currently focused prefab, and the path to it from the level root | <ol><li>Add additional entities to the prefab hierarchy and click through the breadcrumb widget to ensure the mode changes as expected.</li></ol>|                                                                                                                                                                                                                                                                        |
 ---
 
-### Workflow 4: Read-Only Entities
+## Workflow 4: Read-Only Entities
 
 **Product:** 
 No tangible product, this workflow covers updating/manipulating tangible products, but doesn't itself generate any
@@ -97,7 +114,7 @@ Instantiate a Procedural Prefab (Example Procedural Prefabs in AutomatedTesting:
 | Viewport: Double-click the container entity in the Viewport to enter Focus Mode                                                                       |                                                                                                                                                                                                                                                                                                                                       | <ul><li>Focus Mode is entered.</li><li>No manipulator gizmos are available on the container entity or child read-only entities.</li><li>`Right-click` context menus are limited to "Open pinned Inspector" and "Find in viewport".</li><li>Selecting read-only entities in the Outliner displays the component information in the Entity Inspector:</li><ul><li>Components should be greyed out.</li><li>Name field is not editable.</li><li>No new components can be added.</li><li>Existing components cannot be removed.</li><li>Components can be copied.</li></ul><li>Dragging an asset/prefab from the Asset Browser into the Viewport while a Procedural Prefab is focused is not allowed.</li></ul>                                                                                                                                 |
 ---
 
-### Workflow 5: Gem dependencies
+## Workflow 5: Gem dependencies
 
 **Product:** 
 A project with the White Box and the Script Canvas gems activated.
