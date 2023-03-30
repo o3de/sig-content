@@ -4,7 +4,12 @@ These workflows center around testing the basic functionality of the Project Man
 
 ## Prerequisites
 
-*   Locally installed tools for the remote source being used (git installed with credentials for GitHub, for example)
+* Locally installed tools for the remote source being used (git installed with credentials for GitHub, for example)
+* A GitHub repository that has a compatible remote project (older projects may need to be updated to support this feature).
+   * Examples:
+     * NewspaperDeliveryGame (https://github.com/o3de/NewspaperDeliveryGame.git)
+     * Another [O3DE](https://github.com/o3de) owned sample with a compatible remote project.
+   * Your own repository URI with a project you've created.
 
 ## Common Issues
 
