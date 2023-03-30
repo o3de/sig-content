@@ -2,9 +2,18 @@
 
 These workflows center around testing the basic functionality of the Project Manager remote template acquisition tools.
 
+## Documentation & Tutorials
+
+* [Workshop: Building a Networked Game from Scratch...](https://youtu.be/4f4olmUo44k)
+
 ## Prerequisites
 
-*   Locally installed tools for the remote source being used (git installed with credentials for GitHub, for example)
+* Locally installed tools for the remote source being used (git installed with credentials for GitHub, for example)
+* A GitHub repository that has a remote template.
+    * Examples:
+       * O3DE-Extras (https://github.com/o3de/o3de-extras.git)
+       * Another [O3DE](https://github.com/o3de) owned sample with a remote template
+    * Your own repository URI with a template you've created.
 
 ## Common Issues
 
