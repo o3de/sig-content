@@ -2,14 +2,54 @@
 
 These workflows center around testing the basic functionality of the Project Manager remote project acquisition tools.
 
+## Repository Configuration
+
+A git repository must contain a `repo.json` at its root which defines it as a remote project.
+
+See [ThirdPersonTemplate repo.json](https://github.com/o3de/ThirdPersonTemplate/blob/main/repo.json) as an example.
+```json
+{
+    "projects": [
+        "https://github.com/o3de/ThirdPersonTemplate.git"
+    ]
+}
+```
+
+The remote project's `project.json` contains a definition defining it as a remote project.
+
+See [ThirdPersonTemplate project.json](https://github.com/o3de/ThirdPersonTemplate/blob/main/project.json) as an example.
+```json
+{
+    "project_name": "ThirdPersonTemplate",
+    "project_id": "{b4db7f1f-a52b-40be-86f6-22e120b9ff55}",
+    "origin": "https://github.com/o3de/ThirdPersonTemplate",
+    "license": "https://opensource.org/licenses/Apache-2.0, https://opensource.org/licenses/MIT, https://creativecommons.org/licenses/by/4.0/",
+    "display_name": "ThirdPersonTemplate",
+    "summary": "A template project of an animated and controllable character with a 3rd Person perspective camera.",
+    "canonical_tags": [
+        "Project"
+    ],
+    "user_tags": [
+        "ThirdPersonTemplate"
+    ],
+    "icon_path": "preview.png",
+    "engine": "o3de-sdk",
+    "external_subdirectories": [
+        "Gem"
+    ],
+    "restricted": "ThirdPersonTemplate",
+	"origin_uri":"https://github.com/o3de/ThirdPersonTemplate.git"
+}
+```
+
 ## Prerequisites
 
 * Locally installed tools for the remote source being used (git installed with credentials for GitHub, for example)
-* A GitHub repository that has a compatible remote project (older projects may need to be updated to support this feature).
-   * Examples:
+* A remote Git repository (GitHub, AWS CodeCommit, BitBucket, self-hosted, ETC) that has a remote project.
      * NewspaperDeliveryGame (https://github.com/o3de/NewspaperDeliveryGame.git)
+     * ThirdPersonTemplate (https://github.com/o3de/ThirdPersonTemplate.git)
      * Another [O3DE](https://github.com/o3de) owned sample with a compatible remote project.
-   * Your own repository URI with a project you've created.
+     * Your own repository URI with a project you've created.
 
 ## Common Issues
 
