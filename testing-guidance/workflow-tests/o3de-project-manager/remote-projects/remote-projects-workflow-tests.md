@@ -46,10 +46,11 @@ See [ThirdPersonTemplate project.json](https://github.com/o3de/ThirdPersonTempla
 
 * Locally installed tools for the remote source being used (git installed with credentials for GitHub, for example)
 * A remote Git repository (GitHub, AWS CodeCommit, BitBucket, self-hosted, ETC) that has a remote project.
-     * NewspaperDeliveryGame (https://github.com/o3de/NewspaperDeliveryGame.git)
-     * ThirdPersonTemplate (https://github.com/o3de/ThirdPersonTemplate.git)
-     * Another [O3DE](https://github.com/o3de) owned sample with a compatible remote project.
-     * Your own repository URI with a project you've created.
+  * Examples: 
+    * NewspaperDeliveryGame (https://github.com/o3de/NewspaperDeliveryGame.git)
+    * ThirdPersonTemplate (https://github.com/o3de/ThirdPersonTemplate.git)
+    * Another [O3DE](https://github.com/o3de) owned sample with a compatible remote project.
+  * Your own repository URI with a project you've created.
 
 ## Common Issues
 
