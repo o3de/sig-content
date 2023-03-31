@@ -6,10 +6,36 @@ These workflows center around testing the basic functionality of the Project Man
 
 * [Workshop: Building a Networked Game from Scratch...](https://youtu.be/4f4olmUo44k)
 
+## Repository Configuration
+
+A git repository must contain a `repo.json` at its root which points to templates. The `repo.json` contains a template 
+list which points to the project templates within said repository.
+
+See [O3DE-Extras repo.json](https://github.com/o3de/o3de-extras/blob/development/repo.json) as an example.
+```json
+"templates": [
+        "https://github.com/o3de/o3de-extras.git/Templates/Multiplayer",
+        "https://github.com/o3de/o3de-extras.git/Templates/Ros2ProjectTemplate"
+    ]
+```
+
+Each template folder must contain a `template.json` at its root which describes the template. Including information such 
+as where the template zip can be downloaded, and the zip's SHA256 hash value for security.
+
+See [O3DE-Extras Multiplayer template.json](https://github.com/o3de/o3de-extras/blob/development/Templates/Multiplayer/template.json) as example.
+```json
+{
+    "template_name": "Multiplayer",
+    "origin": "Open 3D Engine - o3de.org",
+    "origin_uri": "https://github.com/o3de/o3de-extras/releases/download/1.0/Template_Multiplayer-1.0.zip",
+    "sha256": "c1d1f6e260c6121f013b4d54e213e0c7f0f99281c66ebe48bb6403a1180ee444"
+}
+```
+
 ## Prerequisites
 
 * Locally installed tools for the remote source being used (git installed with credentials for GitHub, for example)
-* A GitHub repository that has a remote template.
+* A remote Git repository (GitHub, AWS CodeCommit, BitBucket, self-hosted, ETC) that has a remote template.
     * Examples:
        * O3DE-Extras (https://github.com/o3de/o3de-extras.git)
        * Another [O3DE](https://github.com/o3de) owned sample with a remote template
