@@ -89,6 +89,7 @@ See [sample-code-gems repo.json](https://github.com/o3de/sample-code-gems/blob/m
 * A remote Git repository (GitHub, AWS CodeCommit, BitBucket, self-hosted, ETC) that has a remote project.
   * Examples: 
     * sample-code-gems (https://github.com/o3de/sample-code-gems.git)
+    * O3DE Canonical Gems (https://canonical.o3de.org) [o3de/o3de#15557](https://github.com/o3de/o3de/issues/15557)
     * Another [O3DE](https://github.com/o3de) owned sample with compatible remote gems.
   * Your own repository URI with a remote gem you've created.
 
