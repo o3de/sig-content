@@ -28,7 +28,7 @@ These workflows center around testing the basic functionality of the Project Man
 | Platform Support - Platforms Unspecified | 1.  Create a Gem, without including Platform selections during Step 2<br>2.  Finish Gem Creation                                                                                                               | * Created Gem Shows no entry related to Platforms in its description within the Gem Catalog                                                                                                                                                                                                                             |
 
 
-### Workflow 4: Add a remote gem from O3DE Project Manager
+### Workflow 2: Add a remote gem from O3DE Project Manager
 
 **Workflow Docs**
 https://www.o3de.org/docs/user-guide/gems/repositories/overview/
