@@ -53,7 +53,8 @@ Test guidance will sometimes note specific issues to watch for. The common issue
 ### Area: Engine Versioning CLI Workflows
 
 **Example Parameters**
-*  `<EngineVersion>` can be replaced with something along the lines of `o3de==1.0.0`.
+* `<EngineVersion>` can be replaced with something along the lines of `o3de==1.0.0`.
+   * Value passed in must be a registered engine name. 
 
 **Editor Platforms:**
 * Windows
