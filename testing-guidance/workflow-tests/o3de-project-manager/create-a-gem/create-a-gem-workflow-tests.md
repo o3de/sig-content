@@ -5,33 +5,66 @@ These workflows center around testing the basic functionality of the Project Man
 ## Common Issues
 
 *   Dialogs do not open or progress as expected
-*   Created gems do not immediately refresh in gem catalog list
+*   Created gems do not immediately refresh in **Gem Catalog** list
 
 ## Workflows
 
-### Workflow 1: Create a Gem from O3DE Project Manager
+### Workflow: Create a Gem from O3DE Project Manager
+
+### New Gem Template
+
+* Prebuilt Gem
+* GemRepo
+* Asset Gem
+* Default Gem
+* C++ Tool Gem
+* Python Tool Gem
+* Choose existing template
+
+#### Gem Details Editable Fields
+ 
+* Gem System Name [*Required]
+* Gem Display Name [*Required]
+* Gem Summary
+* Requirements
+* Target Platform(s)
+* License [*Required]
+* License URL
+* User-defined Gem Tags
+* Gem Location [*Required] [o3de/o3de#13736](https://github.com/o3de/o3de/issues/13736) 
+* Gem Icon Path [o3de/o3de#15540](https://github.com/o3de/o3de/issues/15540)
+* Documentation URL
+
+#### Creator Details Editable Fields
+
+* Creator Name [*Required]
+* Origin URL
+* Repository URL
+
+### Target Platforms
+
+* Windows
+* Linux
+* iOS
+* Android
+* All Platforms
 
 **Platforms**
 * Windows
 * Linux
 
-| Workflow                                 | Steps                                                                                                                                                                                                          | Expectations                                                                                                                                                                                                                                                                                                            |
-|------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Launch Create a Gem experience           | 1.  Enter the Gem Catalog<br>2.  Select the hamburger menu in the top right corner<br>3.  Select "Create a New Gem"                                                                                            | Dialog changes to Create a New Gem step 1 "Gem Setup"                                                                                                                                                                                                                                                                   |
-| Step 1 - Gem Setup Options               | 1.  Launch the Create a Gem experience<br>2.  Observe the options in Step 1                                                                                                                                    | Dialog displays options for:<br><br>*   Prebuilt Gem<br>*   GemRepo<br>*   Asset Gem<br>*   Default Gem<br>*   C++ Tool Gem<br>*   Python Tool Gem<br>*   Choose existing template                                                                                                                                      |
-| Step 2 - Gem Details                     | 1.  Launch the Create a Gem experience<br>2.  Select a gem type/template<br>3.  Left click Next                                                                                                                | All fields can be edited<br>    *   Gem System Name<br>   *   Gem Display Name<br>    *   Gem Summary<br>    *   Requirements<br>    *   Target Platform(s)<br>   *   License<br>    *   License URL<br>    *   User-defined Gem Tags<br>    *   Gem Location<br>    *   Gem Icon Path<br>    *   Documentation URL<br> |
-| Step 2 - Required Fields not satisfied   | 1.  Launch the Create a Gem experience<br>2.  Select a gem type/template<br>3.  Left click Next<br>4.  On step 2 page, click next without entering information into some of the required fields (marked by \*) | *   User is unable to progress without required fields and a visual indicator suggests what is missing<br>   Required Fields:<br>    *   Gem Display Name<br>    *   Gem System Name<br>    *   License<br>   *   Gem Location<br>                                                                                      |
-| Step 3 - Creator Details                 | 1.  Launch the Create a Gem experience<br>2.  Select a Gem Type/Template<br>3.  Left Click Next<br>4.  Enter Details for Gem<br>5.  Left Click Next                                                            | *   User is unable to progress without required fields and a visual indicator suggests what is missing<br>   Required Fields:<br>    *   Creator Name<br>                                                                                                                                                               |
-| Gem name matches existing gem            | 1.  Create two gems with the same name, but different values for description, etc.                                                                                                                             | *   No issues in using both gems together                                                                                                                                                                                                                                                                               |
-| Created Gem displays in Gem Catalog      | 1.  All steps completed (1-3) for creating a new gem<br>2.  Go to Gem Catalog if not already there after creating                                                                                              | *   Gem can be found in the gem catalog and enabled/disabled                                                                                                                                                                                                                                                            |
-| Platform Support - Platforms Specified   | 1.  Create a Gem, including Platform selections during Step 2<br>2.  Finish Gem Creation                                                                                                                       | * Created Gem shows the selected Platforms in its description within the Gem Catalog                                                                                                                                                                                                                                    |
-| Platform Support - Platforms Unspecified | 1.  Create a Gem, without including Platform selections during Step 2<br>2.  Finish Gem Creation                                                                                                               | * Created Gem Shows no entry related to Platforms in its description within the Gem Catalog                                                                                                                                                                                                                             |
+| Workflow                                 | Steps                                                                                                                                                                                                                                                                                                                                                                                    | Expectations                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Create a Gem Experience                  | <ol><li>Enter the Gem Catalog.</li><li>Select the hamburger menu in the top right corner.</li><li>Select **Create New Gem**.</li><li>Select a gem **type** or **template** that you want to create and click next.</li><li>Populate the gem details fields and click next.</li><li>Populate the Creator Details and click next.</li><li>Return to **Gem Catalog** and refresh.</li></ol> | <ul><li>A new gem can be created using all [New Gem Templates](#new-gem-template).</li><li>All [Gem Details Editable Fields](#gem-details-editable-fields) & [Creator Details Editable Fields](#create-details-editable-fields) can be modified.</li><li>If [Required Gem Details Fields](#gem-details-editable-fields) or [Creator Details Editable Fields](#create-details-editable-fields) are not populated with valid data the user cannot proceed and a visual indicator informs the user of the required fields.</li><li>Gem folder is created in the target destination with the expected type or template.</li><li>Created Gem displays in Gem Catalog.</li></ul> |
+| Gem name matches existing gem            | <ol><li>Create two gems with the same name, but different values for description, etc.</li></ol>                                                                                                                                                                                                                                                                                         | <ul><li>No issues in using both gems together.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Platform Support - Platforms Specified   | <ol><li>Create a Gem and include desired [Target Platforms](#target-platforms) selections on the **Gem Details** panel.</li></ol>                                                                                                                                                                                                                                                        | <ul><li>Created Gem shows the selected Platforms in its description within the **Gem Catalog**.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Platform Support - Platforms Unspecified | <ol><li>Create a Gem, without including any desired [Target Platforms](#target-platforms)</li></ol>                                                                                                                                                                                                                                                                                      | <ul><li>Created Gem Shows no entry related to Platforms in its description within the **Gem Catalog**.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 
-### Workflow 2: Add a remote gem from O3DE Project Manager
+### Workflow: Add a remote gem from O3DE Project Manager
 
 **Workflow Docs**
-https://www.o3de.org/docs/user-guide/gems/repositories/overview/
+[O3DE Gem Repositories](https://www.o3de.org/docs/user-guide/gems/repositories/overview/)
 
 **Repository Configuration**
 
