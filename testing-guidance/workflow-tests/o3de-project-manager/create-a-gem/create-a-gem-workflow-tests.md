@@ -9,6 +9,12 @@ These workflows center around testing the basic functionality of the Project Man
 
 ## Workflows
 
+### Workflow 1: Create a Gem from O3DE Project Manager
+
+**Platforms**
+* Windows
+* Linux
+
 | Workflow                                 | Steps                                                                                                                                                                                                          | Expectations                                                                                                                                                                                                                                                                                                            |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Launch Create a Gem experience           | 1.  Enter the Gem Catalog<br>2.  Select the hamburger menu in the top right corner<br>3.  Select "Create a New Gem"                                                                                            | Dialog changes to Create a New Gem step 1 "Gem Setup"                                                                                                                                                                                                                                                                   |
@@ -20,3 +26,48 @@ These workflows center around testing the basic functionality of the Project Man
 | Created Gem displays in Gem Catalog      | 1.  All steps completed (1-3) for creating a new gem<br>2.  Go to Gem Catalog if not already there after creating                                                                                              | *   Gem can be found in the gem catalog and enabled/disabled                                                                                                                                                                                                                                                            |
 | Platform Support - Platforms Specified   | 1.  Create a Gem, including Platform selections during Step 2<br>2.  Finish Gem Creation                                                                                                                       | * Created Gem shows the selected Platforms in its description within the Gem Catalog                                                                                                                                                                                                                                    |
 | Platform Support - Platforms Unspecified | 1.  Create a Gem, without including Platform selections during Step 2<br>2.  Finish Gem Creation                                                                                                               | * Created Gem Shows no entry related to Platforms in its description within the Gem Catalog                                                                                                                                                                                                                             |
+
+
+### Workflow 4: Add a remote gem from O3DE Project Manager
+
+**Workflow Docs**
+https://www.o3de.org/docs/user-guide/gems/repositories/overview/
+
+**Repository Configuration**
+
+A git repository must contain a `repo.json` at its root which points to templates. The `repo.json` contains a gems 
+list which points to the remote gems within said repository.
+
+See [sample-code-gems repo.json](https://github.com/o3de/sample-code-gems/blob/main/repo.json) as an example.
+
+```json
+{
+    "gems": [
+        "https://raw.githubusercontent.com/o3de/sample-code-gems/main/atom_gems/AtomTutorials",
+        "https://raw.githubusercontent.com/o3de/sample-code-gems/main/cpp_gems/ShapeExample",
+        "https://raw.githubusercontent.com/o3de/sample-code-gems/main/py_gems/PyShapeExample"
+    ]
+}
+```
+
+**Workflow Requirements**
+* A built project to add a remote gem to (a blank template project is acceptable).
+* Locally installed tools for the remote source being used (git installed with credentials for GitHub, for example)
+* A remote Git repository (GitHub, AWS CodeCommit, BitBucket, self-hosted, ETC) that has a remote project.
+  * Examples: 
+    * sample-code-gems (https://github.com/o3de/sample-code-gems.git)
+    * Another [O3DE](https://github.com/o3de) owned sample with compatible remote gems.
+  * Your own repository URI with a remote gem you've created.
+
+**Platforms**
+* Windows
+* Linux
+
+**Product:** A built project with a remote gem added to it.
+
+**Suggested Timebox:** 30 minutes per platform
+
+| Workflow                                                 | Requests                                                                                                                                                                                                                                                                                                                                                                                                                | Things to Watch For                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Add **Remote Gem(s)** to **Gem Remote Sources Manager**. | <ol><li>Open O3DE Project Manager.</li><li>Select **Gems** from the O3DE Project Manager Ribbon.</li><li>Open **Gem Remote Sources Manager**. <ul><li>`Gem Catalog Hamburger Menu → Show Gem Repos`</li></ul></li><li>Add your remote gem repository.<ul><li>Click **Add Repository** button.</li><li>Add your remote gem URI and click the **Add** button in the **Add a User Repository** dialog.</li></ul></li></ol> | <ul><li>**Gem Remote Sources Manager** lists the remote repositories.</li><li>Remote gems are displayed in **Gem Catalog** only when Remote Source is added to the **Gem Remote Sources Manager**.</li><li>**Gem Remote Sources Manager** can be refreshed.</li><li>A **Remote Source** can be deleted from the **Gem Remote Sources Manager.**</li><li>Gems that have had their **Remote Source** removed from the **Remote Sources Manager** do not display in the **Gem Catalog**.</ul> |
+| Add **Remote Gem** to an **O3DE Project**.               | <ol><li>Add **Remote Gem(s)** to the **Gem Remote Sources Manager.**</li><li>Configure your project to add your **Remote Gem(s)**.</li><li>Build and open your project in the O3DE Editor.</li></ol>                                                                                                                                                                                                                    | <ul><li>**Remote Gem(s)** can be added & removed from an **O3DE Project**.</li><li>Known good **Remote Gem(s)** should build.</li><li>**Remote Gem(s)** content can be interacted with from the O3DE Editor. <ul><li>EG: Assets are processed and available in asset manager if assets are present.</li><li>EG: Editor Entity Components can be added if Editor Entity Components are present.</li><li>Script Canvas nodes </li></ul></li></ul>                                            |
