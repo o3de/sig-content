@@ -230,7 +230,7 @@ function BaseScript:OnActivate()
 end
 
 --OnHeld is activated when an input is being held or applied constantly (as in the case of mouse movement)
-function PlayerScript:OnHeld(inputValue)
+function BaseScript:OnHeld(inputValue)
 	--Create a reference to the currently used input
 	local currentBusId = InputEventNotificationBus.GetCurrentBusId();
 	
