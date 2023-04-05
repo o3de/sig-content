@@ -25,9 +25,21 @@ Test guidance will sometimes note specific issues to watch for. The common issue
 - Engine version mismatch causing erratic behavior.
 - Unexpected build failures due to version mis-matches.
 
+## Engine Version Locations
+
+* Installer
+* Splash Screen
+* About Screen
+
 ## Workflows
 
 ### Area: General Engine Versioning Tool Validation Workflow
+
+**Project Requirements**
+* A newly [created gem](../gem/gem-workflow-tests.md) that supports engine versioning
+  * Older, existing, gems may default to `0.0.0`.
+    * This may change in released builds due to the nature of branch development/builds always being in flux.
+
 
 **Editor Platforms:**
 * Windows
@@ -37,9 +49,11 @@ Test guidance will sometimes note specific issues to watch for. The common issue
 
 **Suggested Time Box:** 30 minutes per platform.
 
+
+
 | Workflow                                                                       | Requests                                                                                                                                                                                                           | Things to Watch For                                                                                                                                                                                                                  |
 |--------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Engine Version propagates to Engine**                                        | <ol><li>Engine built.</li><li>Project created/built.</li><li>Launch the Editor.</li><li>Observe the following areas:<ul><li>Installer.</li><li>Splash Screen.</li><li>About Screen.</li></ul></li></ol>            | <ul><li>Displayed version on the various engine screens match that found in the engine version file.</li></ul>                                                                                                                       |
+| **Engine Version propagates to Engine**                                        | <ol><li>Engine built.</li><li>Project created/built.</li><li>Launch the Editor.</li></ol>                                                                                                                          | <ul><li>Engine version is reflected on [Engine Version Locations](#engine-version-locations) match the version found in the engine version file.</li></ul>                                                                           |
 | **Project Engine Field Populates with All Locally Installed Engine Versions**  | <ol><li>Launch Project Manager.</li><li>Edit Project Settings for an existing project.</li><li>Click the drop-down for the Engine entry.</li></ol>                                                                 | <ul><li>All locally installed/built Engine versions are populated in the list.</li></ul>                                                                                                                                             |
 | **Current Engine Version displays for projects**                               | <ol><li>Launch Project Manager.</li><li>Go to existing project settings.</li></ol>                                                                                                                                 | <ul><li>Engine entry displays current engine for given project.</li></ul>                                                                                                                                                            |
 | **Supported Engine Version functions for Gems**                                | <ol><li>Confirm Gem listed current engine as supported in the gem's `gem.json` in the gem folder.</li><li>Add the gem to a project compatible with the current Engine version.</li><li>Build the project</li></ol> | <ul><li>No Compile issues with the project.</li><li>The gem functionality works as expected.</li></ul>                                                                                                                               |
