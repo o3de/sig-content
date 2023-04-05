@@ -45,11 +45,9 @@ Test guidance will sometimes note specific issues to watch for. The common issue
 * Windows
 * Linux
 
-**Product:** Changing engine versions is reflected across  
+**Product:** Changing engine versions is reflected across the engine & tools.
 
 **Suggested Time Box:** 30 minutes per platform.
-
-
 
 | Workflow                                                                       | Requests                                                                                                                                                                                                           | Things to Watch For                                                                                                                                                                                                                  |
 |--------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
