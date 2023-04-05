@@ -36,7 +36,7 @@ Test guidance will sometimes note specific issues to watch for. The common issue
 ### Area: General Engine Versioning Tool Validation Workflow
 
 **Project Requirements**
-* A newly [created gem](../gem/gem-workflow-tests.md) that supports engine versioning
+* A newly [created gem](../gems/gem-workflow-tests.md) that supports engine versioning
   * Older, existing, gems may default to `0.0.0`.
     * This may change in released builds due to the nature of branch development/builds always being in flux.
 
