@@ -3,12 +3,18 @@
 Testing in this area should revolve primarily around Landscape Canvas graph configuration to create an interesting instance spawner setup
 
 ## Project Requirements
-AutomatedTesting project, or another project with Atom and all Vegetation system Gems
+AutomatedTesting project, or another project with Atom, all Vegetation system, and Landscape Canvas Gems enabled
 
 ## Common Issues to Watch For
 Test guidance will sometimes note specific issues to watch for. The common issues below should be watched for through all testing, even if unrelated to the current workflow being tested.
 1. Console log errors/warnings/spam
 2. Asserts
+
+## Helpful Documentation
+
+1. https://www.o3de.org/docs/user-guide/gems/reference/environment/
+2. https://www.o3de.org/docs/user-guide/gems/reference/environment/landscape-canvas/
+3. https://www.o3de.org/docs/user-guide/gems/reference/environment/surface-data/
 
 ### Workflow 1: Construction/configuration of an instance spawner via Landscape Canvas
 
