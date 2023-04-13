@@ -136,3 +136,27 @@ See [sample-code-gems repo.json](https://github.com/o3de/sample-code-gems/blob/m
 | Add **Remote Gem** to an **O3DE Project**.               | <ol><li>Add **Remote Gem(s)** to the **Gem Remote Sources Manager.**</li><li>Configure your project to add your **Remote Gem(s)**.</li><li>Build and open your project in the O3DE Editor.</li></ol>                                                                                                                                                                                                                    | <ul><li>**Remote Gem(s)** can be added & removed from an **O3DE Project**.</li><li>Known good **Remote Gem(s)** should build.</li><li>**Remote Gem(s)** content can be interacted with from the O3DE Editor. <ul><li>EG: Assets are processed and available in asset manager if assets are present.</li><li>EG: Editor Entity Components can be added if Editor Entity Components are present.</li><li>EG: Script Canvas nodes can be added to a graph if Script Canvas nodes are present in the gem.</li></ul></li></ul>|
 ---
 
+
+### Workflow: Verify Gem's version and engine compatibility in Project Manager
+
+**Workflow Docs**
+
+[O3DE Gem Repositories](https://www.o3de.org/docs/user-guide/gems/repositories/overview/)
+
+**Workflow Requirements**
+* O3DE built
+* Gem with at least two versions
+
+**Platforms**
+* Windows
+* Linux
+
+**Product:** Gem's version, and Engine compatible data displayed in the Gem's Inspector.
+
+**Suggested Timebox:** 30 minutes per platform
+
+| Workflow                                                 | Requests                                                                                                                                                                                                                                                                                                                                                                                                                | Things to Watch For                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Verify **Gem's compatible engine** | <ol><li>Open the O3DE Project Manager.</li><li>Select **Gems** tab.</li><li>Select any Gem from the **Gem Catalog** list.</li> <li>In the Inspector, verify that **Compatible Engines** data is present.</li>| <ul><li>The **Compatible Engines** data is empty.</li><li>The **Compatible Engines** data is missing.</li></ul>                               |
+| Verify **Gem's version** changes| <ol><li>Add a Gem with at least two versions to the engine.</li><li>Open the O3DE Project Manager.</li><li>Select **Gems** tab.</li><li>Search for a Gem with multiple versions in **Gem Catalog**.</li><li>Select the Gem.</li><li>In the Inspector, change the Gem's version by using the dropdown menu.</li><ol>                                                                                                                                                                                                                    | <ul><li>Gem's version data is not displayed in the Inspector</li><li>Gem's with multiple versions are not displayed in the Gems Catalog.</li><li>Gem's version dropdown menu is not working.</li><li>Changing the Gem's version in the Gem's Catalog Inspector does not have any effect - Initialy selected version of the Gem is active.</li></ul>|
+---
